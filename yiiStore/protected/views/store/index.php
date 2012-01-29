@@ -77,7 +77,7 @@ elseif (isset($_GET["albid"]) && isset($_GET["aid"]))
 		<table>
 			<tr>
 				<td valign = "top">
-				<img src = "' . Yii::app()->request->baseUrl . $Album->AlbumArtUrl . '" width="150" height="100"/><br />
+				<?php echo  '<img src = "'. Yii::app()->request->baseUrl . $Album->AlbumArtUrl . '" width="250" height="300"/>'?><br />
 				</td>
 				<td></td>
 				<td valign = "top"> <?php echo "<h4> TRACKS </h4>" . $tracks; ?></td>
