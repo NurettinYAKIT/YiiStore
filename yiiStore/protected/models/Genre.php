@@ -7,6 +7,7 @@
  * @property integer $GenreId
  * @property string $Name
  * @property string $Description
+ * @property string $tarih
  */
 class Genre extends CActiveRecord
 {
@@ -37,10 +38,10 @@ class Genre extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('Name', 'length', 'max'=>120),
-			array('Description', 'safe'),
+			array('Description, tarih', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('GenreId, Name, Description', 'safe', 'on'=>'search'),
+			array('GenreId, Name, Description, tarih', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,6 +65,7 @@ class Genre extends CActiveRecord
 			'GenreId' => 'Genre',
 			'Name' => 'Name',
 			'Description' => 'Description',
+			'tarih' => 'Tarih',
 		);
 	}
 
@@ -81,6 +83,7 @@ class Genre extends CActiveRecord
 		$criteria->compare('GenreId',$this->GenreId);
 		$criteria->compare('Name',$this->Name,true);
 		$criteria->compare('Description',$this->Description,true);
+		$criteria->compare('tarih',$this->tarih,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
