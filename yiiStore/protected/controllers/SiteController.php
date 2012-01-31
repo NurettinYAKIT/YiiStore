@@ -27,9 +27,20 @@ class SiteController extends Controller
 	 */
 	public function actionIndex()
 	{
+		
+		$date = '2012-02-02 00:00:00';
+		
+		if(isset($_POST['first_date'])){
+			$date = $_POST['first_date'];
+			
+			echo $date;
+		}
+		
 		$Criteria = new CDbCriteria();
 		$Criteria->select = "*";
+		$Criteria->condition = "`t`.`tarih` = '".$date." 00:00:00'";
 		$Criteria->order = "Name ASC";
+		
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
 		$this->render('index', array('Genres' => Genre::model()->findAll($Criteria)));
