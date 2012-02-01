@@ -41,9 +41,9 @@ CREATE  TABLE `yiimusicstore`.`tbl_room` (
 
 
 
-	INSERT INTO `yiimusicstore`.`tbl_room` (`name`, `picture`, `price`) VALUES ('The White Room', '/images/room_white.jpg', 5);
-	INSERT INTO `yiimusicstore`.`tbl_room` (`name`, `picture`, `price`) VALUES ('The Pink Room', '/images/room_pink.jpg', 4);
-	INSERT INTO `yiimusicstore`.`tbl_room` (`name`, `picture`, `price`) VALUES ('The Room Gray', '/images/room_white.jpg', 5);
+	INSERT INTO `yiimusicstore`.`tbl_room` (`name`, `picture`, `price`) VALUES ('The White Room', '/images/room/room_white.jpg', 5);
+	INSERT INTO `yiimusicstore`.`tbl_room` (`name`, `picture`, `price`) VALUES ('The Pink Room', '/images/room/room_pink.jpg', 4);
+	INSERT INTO `yiimusicstore`.`tbl_room` (`name`, `picture`, `price`) VALUES ('The Room Gray', '/images/room/room_white.jpg', 5);
 
 	INSERT INTO `tbl_reservation` (`id`,`user_id`,`total`) VALUES (1,'2',3);
 	
